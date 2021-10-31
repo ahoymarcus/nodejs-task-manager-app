@@ -1,10 +1,10 @@
 // https://www.youtube.com/watch?v=qwfE7fSVaZM
 // 46'24''
-require('./db/connect');
 const express = require('express');
 const bodyParser = require('body-parser');
 
 const tasks = require('./routes/tasks');
+const connectDB = require('./db/connect');
 
 
 
@@ -35,11 +35,19 @@ app.use('/api/v1/tasks', tasks);
 
 const port = 3000;
 
-app.listen(port, console.log(`Server is listening on port${port}`));
+// Refatorar para sincronizar a inicialização
+// do servidor à conexão com o DB......
+const start = async () => {
+	try {
+		await connectDB();
+		app.listen(port, console.log(`Server is listening on port${port}`));
+	} catch (error) {
+		console.log(error);
+	}
+}
 
 
-
-
+start();
 
 
 

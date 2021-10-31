@@ -5,19 +5,19 @@ require('dotenv').config();
 
 const connectionString = process.env.MONGODB_SRV;
 
-mongoose.connect(connectionString, { 
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useCreateIndex: true,
-	useFindAndModify: false
-}).then(() => {
-		console.log('Connected to DB.....')
+
+const connectDB = (url) => {
+	return mongoose.connect(connectionString, { 
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true,
+		useFindAndModify: false
 	})
-	.catch((err) => {
-		console.log(err)
-	});
+};
 
 
+
+module.exports = connectDB
 
  
 
