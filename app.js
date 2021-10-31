@@ -3,10 +3,14 @@
 
 const express = require('express');
 
+const tasks = require('./routers/tasks');
+
 
 
 const app = express();
 
+// Middlewares
+app.use(express.json());
 
 
 // ROUTES
@@ -20,32 +24,16 @@ app.get('/hello', (req, res) => {
 });
 
 
+app.use('/api/v1/tasks', tasks);
+
+
+
 
 
 
 const port = 3000;
 
 app.listen(port, console.log(`Server is listening on port${port}`));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
