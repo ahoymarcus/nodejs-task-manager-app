@@ -1,6 +1,6 @@
 // https://www.youtube.com/watch?v=qwfE7fSVaZM
-// 9'21''
-
+// 46'24''
+require('./db/connect');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -17,16 +17,15 @@ app.use(bodyParser.json());
 
 
 // ROUTES
+app.get('/hello', (req, res) => {
+	res.send('Task manager App');
+});
+
 // app.get('/api/v1/tasks')
 // app.post('/api/v1/tasks')
 // app.get('/api/v1/tasks/:id')
 // app.patch('/api/v1/tasks/:id')
 // app.delete('/api/v1/tasks/:id')
-app.get('/hello', (req, res) => {
-	res.send('Task manager App');
-});
-
-
 app.use('/api/v1/tasks', tasks);
 
 

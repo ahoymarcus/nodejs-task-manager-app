@@ -16,7 +16,7 @@ const router = express.Router();
 // ROUTES
 // app.get('/api/v1/tasks')
 // app.post('/api/v1/tasks')
-// app.get('/api/v1/taskss/:id')
+// app.get('/api/v1/tasks/:id')
 // app.patch('/api/v1/tasks/:id')
 // app.delete('/api/v1/tasks/:id')
 
