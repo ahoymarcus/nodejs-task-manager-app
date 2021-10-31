@@ -1,6 +1,12 @@
 const express = require('express');
 
-const { getAllTasks, createTask, getTask, updateTask, deleteTask } = require('../controllers/tasks');
+const { 
+	getAllTasks, 
+	createTask, 
+	getTask, 
+	updateTask, 
+	deleteTask 
+} = require('../controllers/tasks');
 
 
 

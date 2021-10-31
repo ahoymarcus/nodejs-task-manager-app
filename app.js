@@ -2,6 +2,7 @@
 // 9'21''
 
 const express = require('express');
+//const bodyParser = require('body-parser');
 
 const tasks = require('./routes/tasks');
 
@@ -11,6 +12,8 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
+//app.use(bodyParser.json());
+
 
 
 // ROUTES
