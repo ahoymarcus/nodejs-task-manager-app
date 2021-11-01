@@ -1,4 +1,4 @@
-
+// CONTROLLER
 
 const getAllTasks = (req, res) => {
 	res.json('Get all tasks');

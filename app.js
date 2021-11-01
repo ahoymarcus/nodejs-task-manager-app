@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=qwfE7fSVaZM
-// 46'24''
+// 1º11'03''
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -27,7 +27,7 @@ app.get('/hello', (req, res) => {
 // app.patch('/api/v1/tasks/:id')
 // app.delete('/api/v1/tasks/:id')
 app.use('/api/v1/tasks', tasks);
-
+require('dotenv').config();
 
 
 
@@ -39,7 +39,7 @@ const port = 3000;
 // do servidor à conexão com o DB......
 const start = async () => {
 	try {
-		await connectDB();
+		await connectDB(process.env.MONGODB_SRV);
 		app.listen(port, console.log(`Server is listening on port${port}`));
 	} catch (error) {
 		console.log(error);
