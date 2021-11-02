@@ -1,7 +1,25 @@
 # Task Manager App - Freecodecamp.org
 
 
-Projeto **Freecodecamp** usando o backend javascript com Node-JS.[^1]
+Estudo com o projeto **Freecodecamp** usando o backend javascript com Node-JS, para criar uma aplicação que faz o gerenciamento de tarefas.[^1]
+
+
+<br />
+
+Neste projeto temos a aportunidade de trabalhar com uma aplicação totalmente modular, separando modulo para rota, para controladores para as rotas, para o modelo de dados e para a conexão com o banco de dados MongoDB.
+
+
+<br />
+
+Ainda, fazemos uso de middlewares costumizados para tratar erros 404 e 500 de servidor, além de um wrapper para refatorar try/catchs repetidos no script dos códigos assíncronos dos controladores de rotas.
+
+
+<br />
+
+Finalmente, criando uma classe de erro costumizada para estabelecer validação para ser usada num middleware de Erro ExpressJS customizado.
+
+
+
 
 <br />
 
@@ -37,41 +55,6 @@ Dependências:
 
 
 <br />
-
-
-### :               
-![Resultado final do projeto em Freecodecamp.org](/public/images/)
-
-
-
-
-
-<br />
-
-
-### Resultado final do projeto em Freecodecamp.org:               
-![Resultado final do projeto em Freecodecamp.org](/public/images/)
-
-
-
-
-
-<br />
-
-
-### :               
-![Resultado final do projeto em Freecodecamp.org](/public/images/)
-
-
-
-
-
-<br />
-
-
-### :               
-![Resultado final do projeto em Freecodecamp.org](/public/images/)
-
 
 
 
