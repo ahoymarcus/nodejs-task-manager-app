@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=qwfE7fSVaZM
-// 2º07'08''
+// 3º07'35''
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
@@ -39,14 +39,14 @@ app.use(errorHandlerMiddleware)
 
 
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Refatorar para sincronizar a inicialização
 // do servidor à conexão com o DB......
 const start = async () => {
 	try {
 		await connectDB(process.env.MONGODB_SRV);
-		app.listen(port, console.log(`Server is listening on port${port}`));
+		app.listen(port, console.log(`Server is listening on port ${port}`));
 	} catch (error) {
 		console.log(error);
 	}
