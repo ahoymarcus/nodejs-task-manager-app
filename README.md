@@ -11,13 +11,12 @@ Neste projeto temos a aportunidade de trabalhar com uma aplicação totalmente m
 
 <br />
 
-Ainda, fazemos uso de middlewares costumizados para tratar erros 404 e 500 de servidor, além de um wrapper para refatorar try/catchs repetidos no script dos códigos assíncronos dos controladores de rotas.
-
+Ainda, fazemos uso de middlewares costumizados para tratar exceções **404** e **500** de servidor, além de um wrapper para refatorar try/catchs repetidos no script dos códigos assíncronos dos controladores de rotas.
+Criando também uma classe de erro custumizada para estabelecer validação que vai ser usada num middleware de Erro customizado no servidor Express-JS.
 
 <br />
 
-Finalmente, criando uma classe de erro costumizada para estabelecer validação para ser usada num middleware de Erro ExpressJS customizado.
-
+Finalmente, culminando o projeto com a integração com o Frontend, criado pelo professor Smilga e que é servido pelo servidor através do middleware Static do Express-JS.
 
 
 
