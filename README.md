@@ -31,8 +31,8 @@ Dependências:
 
 <br />
 
-### :          
-![Imagem de uma requisição POST para upload de um arquivo e devolvendo ao cliente metadados como resposta](/public/images/)
+### Tela de edição para uma task:              
+![Imagem de uma Tela de edição para uma task](/public/images/tela-de-edicao-da-task.png)
 
 
 
