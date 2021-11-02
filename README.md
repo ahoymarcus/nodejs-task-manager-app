@@ -24,8 +24,8 @@ Dependências:
 
 <br />
 
-### :          
-![File Metadata App home page](/public/images/)
+### Fazendo a primeira integração da API Tasks com o Frontend:              
+![Imagem Fazendo a primeira integração da API Tasks com o Frontend](/public/images/primeira-integracao-do-frontend-com-a-API.png)
 
 
 

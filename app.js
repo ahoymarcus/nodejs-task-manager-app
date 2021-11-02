@@ -11,16 +11,14 @@ const connectDB = require('./db/connect');
 const app = express();
 
 // Middlewares
+app.use(express.static('./public'));
+
 // app.use(express.json());
 app.use(bodyParser.json());
 
 
 
 // ROUTES
-app.get('/hello', (req, res) => {
-	res.send('Task manager App');
-});
-
 // app.get('/api/v1/tasks')
 // app.post('/api/v1/tasks')
 // app.get('/api/v1/tasks/:id')
