@@ -31,11 +31,8 @@ Dependências:
 
 <br />
 
-### Tela de edição para uma task:              
+### Tela de edição para uma task:                
 ![Imagem de uma Tela de edição para uma task](/public/images/tela-de-edicao-da-task.png)
-
-
-
 
 
 
