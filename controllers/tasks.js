@@ -46,8 +46,31 @@ const getTask = async (req, res) => {
 	}
 };
 
-const updateTask = (req, res) => {
-	res.send('Update task');
+const updateTask = async (req, res) => {
+	try {
+		const { id: taskID } = req.params;
+		console.log('taskID: ', taskID);
+		console.log('data: ', req.body);
+		
+		// ATENTION: the use of Options at 3rd params
+		// makes mongoose return the updated task, not 
+		// the old value, and makes it use the
+		// VALIDATION.....
+		let task = await Task.findOneAndUpdate({ _id: taskID }, req.body, {
+			new: true,
+			runValidators: true
+		});
+		
+		if (!task) {
+			res.status(404).json({ msg: `No task with id ${taskID}` });
+		}
+		
+		res.status(200).json({ task });
+	} catch (error) {
+		console.log(error);
+		
+		res.status(500).json({ msg: error });
+	}
 };
 
 const deleteTask = async (req, res) => {
