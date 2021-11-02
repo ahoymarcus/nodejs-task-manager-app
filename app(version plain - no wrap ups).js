@@ -2,12 +2,10 @@
 // 2º07'08''
 const express = require('express');
 const bodyParser = require('body-parser');
-require('dotenv').config();
 
 const tasks = require('./routes/tasks');
 const connectDB = require('./db/connect');
 const notFound = require('./middleware/not-found');
-const errorHandlerMiddleware = require('./middleware/error-handler');
 
 
 
@@ -28,14 +26,12 @@ app.use(bodyParser.json());
 // app.patch('/api/v1/tasks/:id')
 // app.delete('/api/v1/tasks/:id')
 app.use('/api/v1/tasks', tasks);
+require('dotenv').config();
 
 
 
 // 404 Middleware
 app.use(notFound);
-
-// Error handler middleware
-app.use(errorHandlerMiddleware)
 
 
 

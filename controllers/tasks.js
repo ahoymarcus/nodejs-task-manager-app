@@ -1,36 +1,23 @@
 // CONTROLLER
 const Task = require('../models/task');
+const asyncWrapper = require('../middleware/async');
 
 
 
-const getAllTasks = async (req, res) => {
-	try {
+const getAllTasks = asyncWrapper(async (req, res) => {
 		const tasks = await Task.find( {} );
 		
 		res.status(200).json({ tasks });
-	} catch (error) {
-		console.log(error);
-		
-		res.status(500).json({ msg: error });
-	}
-	
-};
+});
 
-const createTask = async(req, res) => {
-	try {
+const createTask = asyncWrapper(async (req, res) => {
 		const task = await Task.create(req.body);
 		
 		// 201 - Successful POST
-	res.status(201).json({ task });
-	} catch (error) {
-		console.log(error);
-		
-		res.status(500).json({ msg: error });
-	}
-};
+		res.status(201).json({ task });
+});
 
-const getTask = async (req, res) => {
-	try {
+const getTask = asyncWrapper(async (req, res) => {
 		const { id: taskID } = req.params;
 		const task = await Task.findOne({ _id: taskID });
 		
@@ -39,15 +26,9 @@ const getTask = async (req, res) => {
 		}
 		
 		res.status(200).json({ task });
-	} catch (error) {
-		console.log(error);
-		
-		res.status(500).json({ msg: error });
-	}
-};
+});
 
-const updateTask = async (req, res) => {
-	try {
+const updateTask = asyncWrapper(async (req, res) => {
 		const { id: taskID } = req.params;
 		console.log('taskID: ', taskID);
 		console.log('data: ', req.body);
@@ -66,15 +47,9 @@ const updateTask = async (req, res) => {
 		}
 		
 		res.status(200).json({ task });
-	} catch (error) {
-		console.log(error);
-		
-		res.status(500).json({ msg: error });
-	}
-};
+});
 
-const deleteTask = async (req, res) => {
-	try {
+const deleteTask = asyncWrapper(async (req, res) => {
 		const {id: taskID } = req.params;
 		const task = await Task.findOneAndDelete({ _id: taskID });
 		
@@ -85,12 +60,7 @@ const deleteTask = async (req, res) => {
 		//res.status(200).json({ task: null, status: 'success' });
 		//res.status(200).send();
 		res.status(200).json({ task });
-	} catch (error) {
-		console.log(error);
-		
-		res.status(500).json({ msg: error });
-	}
-};
+});
 
 
 
