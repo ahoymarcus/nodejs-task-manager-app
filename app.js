@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const tasks = require('./routes/tasks');
 const connectDB = require('./db/connect');
+const notFound = require('./middleware/not-found');
 
 
 
@@ -28,6 +29,9 @@ app.use('/api/v1/tasks', tasks);
 require('dotenv').config();
 
 
+
+// 404 Middleware
+app.use(notFound);
 
 
 
